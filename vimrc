@@ -58,6 +58,7 @@ set smartindent
 
 "show first commit where term under cursor was added
 "map <leader>1 :!git log --reverse -p -S<cword> %<cr>
+let mapleader = ","
 
 " Needed on some linux distros.
 " see
