@@ -33,6 +33,7 @@ let Tlist_Ctags_Cmd = "/usr/bin/ctags"
 let Tlist_WinWidth = 30
 map <F4> :TlistToggle<cr>
 ab pdb import ipdb;ipdb.set_trace()
+map ZZ :w
 
 "set tags+=$HOME/.vim/tags/python.ctags
 
@@ -67,3 +68,10 @@ filetype off
 call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
 
+" if has("gui_running")
+" GUI is running or is about to start.
+" Maximize gvim window.
+"    set lines=999 columns=999
+" endif
+
+map <buffer> K :execute "!pydoc " . expand("<cword>")<CR>
