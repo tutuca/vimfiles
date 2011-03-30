@@ -75,3 +75,6 @@ call pathogen#runtime_append_all_bundles()
 " endif
 
 map <buffer> K :execute "!pydoc " . expand("<cword>")<CR>
+
+"delete this
+let g:pyflakes_use_quickfix = 0
